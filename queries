@@ -1,0 +1,4 @@
+// crear la colection de usuarios, ya que la de recetas se creó desde mongo atlas
+
+db.createCollection("usuarios")
+
