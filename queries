@@ -1,4 +1,15 @@
+// EJERCICIO 01
 // crear la colection de usuarios, ya que la de recetas se creó desde mongo atlas
 
 db.createCollection("usuarios")
 
+// EJERCICIO 02
+//2.1 Cree una consulta para obtener todas las recetas
+
+db.recetas.find({})
+db.recetas.find({}).count() //contar cuantas son
+
+//2.2 Cree una consulta para obtener todos los usuarios
+
+db.usuarios.find({})
+db.usuarios.find({}).count() //contar cuantas son
