@@ -175,6 +175,9 @@ db.usuarios.updateOne(
 
 //2.15 Cree una consulta para consultar los distintos nombres de usuarios.
 
+db.usuarios.find({})
+    .projection({firstName:1 , _id:0})
+
 
 //2.16 Investigue el uso de expresiones regulares en la instrucción find() y cree una consulta para buscar todos los usuarios que tengan correo electrónico con dominio de Gmail.
 
