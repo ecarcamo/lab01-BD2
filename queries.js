@@ -94,7 +94,9 @@ db.recetas.find({})
     .limit(1)
 
 //2.10 Cree una consulta que busque las recetas que tienen comentarios.
-
+db.recetas.find({
+    comments: {$exists: true}
+}).projection({title:1 , comments:1})
 
 //2.11 Cree una consulta en la que liste las recetas que son de postres.
 
