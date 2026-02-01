@@ -9,6 +9,7 @@ db.createCollection("usuarios")
 db.recetas.find({})
 db.recetas.find({}).count() //contar cuantas son
 db.recetas.countDocuments({}) //funciona igual que el count
+db.recetas.findOne() // para ver de una mejor forma como es la estructura
 
 //2.2 Cree una consulta para obtener todos los usuarios
 
@@ -18,7 +19,6 @@ db.usuarios.countDocuments({}) //funciona igual que el count
 
 
 //2.3 Con base a la estructura observada en la colección de recetas, cree un nuevo documento que contenga los siguientes campos:
-db.recetas.findOne() // para ver de una mejor forma como es la estructura
 //2.3.1 Título
 //2.3.2 Descripción
 //2.3.3 Tiempo de cocción
@@ -43,11 +43,32 @@ db.recetas.find({})
     .projection({title:1 , cook_time:1, _id:0})
 
 //2.6 Cree una consulta en la que se listen las recetas ordenadas por mayor tiempo de cocción.
-
+db.recetas.find({})
+    .sort({cook_time:-1})
+    .projection({title:1 , cook_time:1}) // se agrega para poder ver mejor el dato del cook_time, pero es opcional
 
 //2.7 Investigue la instrucción update() para poder agregar un rating más a una receta y actualizar el rating promedio.
-
-
+//esto sirve para saber como esta el rating y el average antes y después de actualizarlo
+db.recetas.find({title: "Chicken Soft Tacos"})
+    .projection({
+        title:1 , rating:1 , rating_avg:1
+    })
+    
+db.recetas.updateOne(
+    {
+        title: "Chicken Soft Tacos"
+    },
+    {
+        $push:{
+            rating: 10
+        },
+        $set: {
+            rating_avg: 4.5
+        }
+    }
+    
+)
+    
 //2.8 Cree una consulta en la que elimine un ingrediente de la lista de ingredientes de una receta en específico.
 
 
