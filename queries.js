@@ -185,7 +185,19 @@ db.usuarios.find({
 }).projection({firstName:1, email:1})
 
 //2.17 Agregar un campo de actividad a los usuarios, para indicar si están activos o inactivos con un valor booleano.
+db.usuarios.updateMany(
+  {},
+  {
+    $set: {
+      active: true
+    }
+  }
+)
 
+db.usuarios.find(
+  {},
+  { firstName: 1, active: 1, _id: 0 }
+) // revisar
 
 //2.18 Cree una consulta en la que inactive a 2 usuarios.
 
