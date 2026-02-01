@@ -105,7 +105,25 @@ db.recetas.find({
 
 
 //2.12 Cree una consulta en la que elimine las recetas que sean difíciles de cocinar.
+db.recetas.find({})
+    .projection({title:1, cook_time:1, prep_time:1}) // esta consulta solo es para explorar los campos para crear la consulta del enunciado
 
+db.recetas.countDocuments({}) //en este punto yo obtengo 9 recetas, antes de ejecutar el delete
+
+db.recetas.deleteMany({
+    $or: [
+        {
+            cook_time: {$gt: 20}
+        },
+        {
+            prep_time: {$gt: 10}
+        }
+    ]
+})
+
+db.recetas.find({})
+    .projection({title:1, cook_time:1, prep_time:1}) //en este punto ya obtengo solamente 3 despues de aplicar mi regla de negocio 
+    
 
 //2.13 Con base a la estructura observada en la colección de usuarios, cree 3 nuevos documentos de usuarios en una sola instrucción, que contenga los siguientes campos:
 //2.13.1 Nombre
