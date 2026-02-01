@@ -200,6 +200,14 @@ db.usuarios.find(
 ) // revisar
 
 //2.18 Cree una consulta en la que inactive a 2 usuarios.
+db.usuarios.updateMany(
+  { firstName: { $in: ["Esteban", "Nico"] } },
+  {
+    $set: {
+      active: false
+    }
+  }
+)
 
 
 //2.19 Cree una consulta en la que cambie la unidad de medida de todas las recetas que tienen lb a kg.
