@@ -131,6 +131,29 @@ db.recetas.find({})
 //2.13.3 Correo electrónico
 //2.13.4 Contraseña
 
+db.usuarios.insertMany(
+    [
+        {
+            firstName: "Esteban",
+            lastname: "Carcamo",
+            email: "estebancarcamou@gmail.com",
+            password: "contraseñaSegura1234"
+        },
+        {
+            firstName: "Nico",
+            lastname: "Concua",
+            email: "nico@gmail.com",
+            password: "si1234**"
+        },
+        {
+            firstName: "Ernesto",
+            lastname: "Ascencio",
+            email: "ernesto@gmail.com",
+            password: "no1234]*"
+        }
+    ]
+)
+
 
 //2.14 Cree las consultas para agregarle la receta favorita a cada uno de los usuarios creados anteriormente.
 
