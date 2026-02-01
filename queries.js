@@ -70,7 +70,21 @@ db.recetas.updateOne(
 )
     
 //2.8 Cree una consulta en la que elimine un ingrediente de la lista de ingredientes de una receta en específico.
+db.recetas.find({title: "Chicken Soft Tacos"})  // revisar ingrendientes de esta receta específica
+    .projection({
+        title:1 , ingredients:1 
+    })
 
+db.recetas.updateOne(
+    {
+        title: "Chicken Soft Tacos"
+    },
+    {
+        $pull: {
+            ingredients: {name: "chicken breast"}
+        }
+    }
+)
 
 //2.9 Investigue la opción skip de la instrucción find() y cree una consulta en la que obtenga la tercera receta con mejor rating promedio.
 
