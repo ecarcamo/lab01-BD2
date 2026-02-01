@@ -1,3 +1,12 @@
+/*
+    Nombre: Esteban Enrique Cárcamo Urízar
+    Carné: 23016
+    Fecha: 31 de enero de 2026
+    Laboratorio No. 1
+*/
+
+
+
 // EJERCICIO 01
 // crear la colection de usuarios, ya que la de recetas se creó desde mongo atlas
 
