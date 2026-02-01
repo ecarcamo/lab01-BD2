@@ -211,6 +211,23 @@ db.usuarios.updateMany(
 
 
 //2.19 Cree una consulta en la que cambie la unidad de medida de todas las recetas que tienen lb a kg.
-
+db.recetas.updateMany(
+  {
+    "ingredients.quantity.unit": "lbs"
+  },
+  {
+    $set: {
+      "ingredients.$[elem].quantity.unit": "kg"
+    }
+  },
+  {
+    arrayFilters: [
+      { "elem.quantity.unit": "lbs" }
+    ]
+  }
+)
 
 //2.20 Cree una consulta en la que elimine a los usuarios inactivos
+
+
+
