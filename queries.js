@@ -8,17 +8,36 @@ db.createCollection("usuarios")
 
 db.recetas.find({})
 db.recetas.find({}).count() //contar cuantas son
+db.recetas.countDocuments({}) //funciona igual que el count
 
 //2.2 Cree una consulta para obtener todos los usuarios
 
 db.usuarios.find({})
 db.usuarios.find({}).count() //contar cuantas son
+db.usuarios.countDocuments({}) //funciona igual que el count
 
 
 //2.3 Con base a la estructura observada en la colección de recetas, cree un nuevo documento que contenga los siguientes campos:
+db.recetas.findOne() // para ver de una mejor forma como es la estructura
 //2.3.1 Título
 //2.3.2 Descripción
 //2.3.3 Tiempo de cocción
+
+//agregar la receta en base a las instrucciones
+db.recetas.insertOne({
+    "title": "Receta agregada Empanadas",
+    "desc": "Esta es una nueva receta agregada para el lab1 que es para empanadas",
+    "cook_time": 30
+})
+
+//ver si realmente se agregó
+db.recetas.find({
+    $or:[
+        { _id: ObjectId("697ec7d09c4667184f0d9cb9")}, 
+        { title: "Receta agregada Empanadas"}
+    ]
+})
+
 
 
 //2.4 Cree una consulta que busque la receta que acaba de crear.
