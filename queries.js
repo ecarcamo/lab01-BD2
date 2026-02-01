@@ -1,7 +1,7 @@
 /*
     Nombre: Esteban Enrique Cárcamo Urízar
     Carné: 23016
-    Fecha: 31 de enero de 2026
+    Fecha: 01 de febrero de 2026
     Laboratorio No. 1
 */
 
