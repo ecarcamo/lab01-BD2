@@ -229,5 +229,8 @@ db.recetas.updateMany(
 
 //2.20 Cree una consulta en la que elimine a los usuarios inactivos
 
+db.usuarios.deleteMany({
+  active: false
+})
 
 
