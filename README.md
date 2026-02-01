@@ -1,11 +1,5 @@
 # Laboratorio 1 - MongoDB Atlas
 
-## Modalidad y Entrega
-
-- **Modalidad**: Individual
-- **Fecha límite**: Domingo 1 de febrero antes de las 23:59 horas
-- **Penalización**: Se restará 10 puntos por cada hora de atraso
-
 ## Objetivo General
 
 Familiarizar a los estudiantes con el entorno de MongoDB Atlas y desarrollar habilidades en la ejecución de consultas y manipulación de datos en MongoDB.
@@ -36,11 +30,6 @@ Familiarizar a los estudiantes con el entorno de MongoDB Atlas y desarrollar hab
   - Resultados de las consultas (suficiente para evidenciar ejecución correcta)
   - Script completo con todas las instrucciones
   - Fecha y hora de ejecución en ambiente local
-
-## Observaciones
-
-- Se recomienda completar la configuración del entorno antes de comenzar los ejercicios
-- No es necesario mostrar todo el resultado de cada instrucción, solo lo suficiente para demostrar su correcta ejecución
 
 ## Objetivo Final
 
