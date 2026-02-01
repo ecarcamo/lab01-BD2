@@ -39,7 +39,8 @@ db.recetas.find({
 })
 
 //2.5 Cree una consulta en la que liste las recetas, mostrando únicamente el título y su tiempo de cocción.
-
+db.recetas.find({})
+    .projection({title:1 , cook_time:1, _id:0})
 
 //2.6 Cree una consulta en la que se listen las recetas ordenadas por mayor tiempo de cocción.
 
