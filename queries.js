@@ -30,18 +30,13 @@ db.recetas.insertOne({
     "cook_time": 30
 })
 
-//ver si realmente se agregó
+//2.4 Cree una consulta que busque la receta que acaba de crear.
 db.recetas.find({
     $or:[
         { _id: ObjectId("697ec7d09c4667184f0d9cb9")}, 
         { title: "Receta agregada Empanadas"}
     ]
 })
-
-
-
-//2.4 Cree una consulta que busque la receta que acaba de crear.
-
 
 //2.5 Cree una consulta en la que liste las recetas, mostrando únicamente el título y su tiempo de cocción.
 
