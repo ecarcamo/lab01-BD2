@@ -99,6 +99,9 @@ db.recetas.find({
 }).projection({title:1 , comments:1})
 
 //2.11 Cree una consulta en la que liste las recetas que son de postres.
+db.recetas.find({
+    type: "Dessert"
+}).projection({title:1, type:1})
 
 
 //2.12 Cree una consulta en la que elimine las recetas que sean difíciles de cocinar.
