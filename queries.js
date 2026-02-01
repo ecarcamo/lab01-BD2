@@ -87,7 +87,11 @@ db.recetas.updateOne(
 )
 
 //2.9 Investigue la opción skip de la instrucción find() y cree una consulta en la que obtenga la tercera receta con mejor rating promedio.
-
+db.recetas.find({})
+    .projection({title:1, rating_avg:1})
+    .sort({rating_avg:-1})
+    .skip(2)
+    .limit(1)
 
 //2.10 Cree una consulta que busque las recetas que tienen comentarios.
 
