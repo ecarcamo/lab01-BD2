@@ -2,7 +2,9 @@
 
 ## Objetivo General
 
-Familiarizar a los estudiantes con el entorno de MongoDB Atlas y desarrollar habilidades en la ejecución de consultas y manipulación de datos en MongoDB.
+Familiarizarme con el entorno de MongoDB Atlas y desarrollar habilidades en la ejecución de consultas y manipulación de datos en MongoDB.
+
+Dentro de este repositorio se encuentran todos los ejercicios realizados uno por uno
 
 ## Descripción de la Actividad
 
