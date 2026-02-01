@@ -157,6 +157,21 @@ db.usuarios.insertMany(
 
 //2.14 Cree las consultas para agregarle la receta favorita a cada uno de los usuarios creados anteriormente.
 
+db.usuarios.updateOne(
+  { firstName: "Esteban" },
+  { $set: { favorite_recipe: ObjectId("5e6fd805fa98021236426a24") } }
+)
+
+db.usuarios.updateOne(
+  { firstName: "Nico" },
+  { $set: { favorite_recipe: ObjectId("5e877cba20a4f574c0aa56da") } }
+)
+
+db.usuarios.updateOne(
+  { firstName: "Ernesto" },
+  { $set: { favorite_recipe: ObjectId("5e5e9c470d33e9e8e3891b35") } }
+)
+
 
 //2.15 Cree una consulta para consultar los distintos nombres de usuarios.
 
