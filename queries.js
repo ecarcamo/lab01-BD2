@@ -180,7 +180,9 @@ db.usuarios.find({})
 
 
 //2.16 Investigue el uso de expresiones regulares en la instrucción find() y cree una consulta para buscar todos los usuarios que tengan correo electrónico con dominio de Gmail.
-
+db.usuarios.find({
+    email: {$regex: /@gmail/}
+}).projection({firstName:1, email:1})
 
 //2.17 Agregar un campo de actividad a los usuarios, para indicar si están activos o inactivos con un valor booleano.
 
